@@ -8,9 +8,8 @@ import { toFileUrl } from "@std/path";
 export async function expandGlobImport(
   glob: string | URL,
   options: ExpandGlobOptions,
-) {
-  // deno-lint-ignore no-explicit-any
-  const modules = new Map<string, any>();
+): Promise<Map<string, unknown>> {
+  const modules = new Map<string, unknown>();
   for await (const entry of expandGlob(glob, options)) {
     const module = await import(toFileUrl(entry.path).href);
     for (const [key, value] of Object.entries(module)) {
