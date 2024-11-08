@@ -8,6 +8,7 @@
     "@std/path": "jsr:@std/path@^1.0.2"
   },
   "tasks": {
-    "test": "deno test --allow-read"
+    "test": "deno test --allow-read",
+    "molt": "deno run -A jsr:@molt/cli -w"
   }
 }
