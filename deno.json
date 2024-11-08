@@ -1,6 +1,6 @@
 {
   "name": "@fartlabs/expand-glob-import",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "exports": "./expand_glob_import.ts",
   "imports": {
     "@std/assert": "jsr:@std/assert@^1.0.2",

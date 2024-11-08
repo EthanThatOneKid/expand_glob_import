@@ -1,8 +1,8 @@
 import { assertEquals } from "@std/assert";
-import { expandGlobImport } from "./expand_glob_import.ts";
+import { expandGlobImportToMap } from "./expand_glob_import.ts";
 
 Deno.test("expandGlobImport imports modules from a glob", async () => {
-  const modules = await expandGlobImport(
+  const modules = await expandGlobImportToMap(
     new URL("./fixtures/*.ts", import.meta.url),
     { root: import.meta.url },
   );
